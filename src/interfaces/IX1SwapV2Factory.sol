@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-interface IFikaswapV2Factory {
+interface IX1SwapV2Factory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint256);
 
     function feeTo() external view returns (address);

@@ -1,0 +1,29 @@
+{
+  "name": "@x1swap/v2-core",
+  "description": "🎛 Core contracts for the X1Swap V2 protocol",
+  "version": "1.0.0",
+  "homepage": "https://x1swap.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/X1SwapLabs/v2-core"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "x1swap",
+    "ethereum",
+    "v2",
+    "core",
+    "x1swap-v2"
+  ],
+  "files": [
+    "src",
+    "out"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {},
+  "license": "GPL-3.0-or-later"
+}

@@ -1,12 +1,12 @@
 pragma solidity =0.5.16;
 
-import "./interfaces/IFikaswapV2ERC20.sol";
+import "./interfaces/IX1SwapV2ERC20.sol";
 import "./libraries/SafeMath.sol";
 
-contract FikaswapV2ERC20 is IFikaswapV2ERC20 {
+contract X1SwapV2ERC20 is IX1SwapV2ERC20 {
     using SafeMath for uint256;
 
-    string public constant name = "Fikaswap V2";
+    string public constant name = "X1Swap V2";
     string public constant symbol = "FIKA-V2";
     uint8 public constant decimals = 18;
     uint256 public totalSupply;
@@ -81,7 +81,7 @@ contract FikaswapV2ERC20 is IFikaswapV2ERC20 {
     function permit(address owner, address spender, uint256 value, uint256 deadline, uint8 v, bytes32 r, bytes32 s)
         external
     {
-        require(deadline >= block.timestamp, "FikaswapV2: EXPIRED");
+        require(deadline >= block.timestamp, "X1SwapV2: EXPIRED");
         bytes32 digest = keccak256(
             abi.encodePacked(
                 "\x19\x01",
@@ -90,7 +90,7 @@ contract FikaswapV2ERC20 is IFikaswapV2ERC20 {
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        require(recoveredAddress != address(0) && recoveredAddress == owner, "FikaswapV2: INVALID_SIGNATURE");
+        require(recoveredAddress != address(0) && recoveredAddress == owner, "X1SwapV2: INVALID_SIGNATURE");
         _approve(owner, spender, value);
     }
 }
